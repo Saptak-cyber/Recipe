@@ -107,7 +107,7 @@ function Home() {
               </Link>
               <Link
                 to="/categories"
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 font-semibold px-6 py-3 rounded-full shadow-lg transition"
+                className="bg-white bg-opacity-20 hover:bg-opacity-30 font-semibold px-6 py-3 rounded-full shadow-lg transition text-black"
               >
                 Browse Categories
               </Link>
@@ -202,7 +202,9 @@ function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((category) => (
               <Link 
-                to="/categories" 
+                // to="/categories" 
+                to={`/recipes?category=${category.strCategory}`}
+                // navigate(`/recipes?category=${category}`);
                 key={category.idCategory}
                 className="bg-white rounded-lg p-4 text-center shadow hover:shadow-md transition cursor-pointer group"
               >
@@ -213,7 +215,7 @@ function Home() {
                 />
                 <h3 className="font-medium text-gray-800">{category.strCategory}</h3>
               </Link>
-            ))}
+        ))}
           </div>
         </section>
 
