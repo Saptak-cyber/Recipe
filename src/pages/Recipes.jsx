@@ -128,7 +128,7 @@ function Recipes() {
                   placeholder="Search recipes..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full p-3 pl-12 pr-4 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="w-full p-3 pl-12 pr-4 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white"
                 />
                 <Search
                   className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500"
