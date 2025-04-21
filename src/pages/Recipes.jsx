@@ -121,7 +121,7 @@ function Recipes() {
 
           {/* Search and Filter */}
           <div className="flex flex-col md:flex-row gap-4">
-            <form onChange={handleSearch} className="flex-grow">
+            <form onSubmit={handleSearch} className="flex-grow">
               <div className="relative">
                 <input
                   type="text"
