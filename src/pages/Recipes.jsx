@@ -121,7 +121,7 @@ function Recipes() {
 
           {/* Search and Filter */}
           <div className="flex flex-col md:flex-row gap-4">
-            <form onSubmit={handleSearch} className="flex-grow">
+            <form onChange={handleSearch} className="flex-grow">
               <div className="relative">
                 <input
                   type="text"
@@ -146,7 +146,7 @@ function Recipes() {
             <div className="relative">
               <button 
                 onClick={() => setFilterOpen(!filterOpen)}
-                className="flex items-center gap-2 bg-white bg-opacity-20 hover:bg-opacity-30 py-3 px-5 rounded-full"
+                className="flex items-center gap-2 bg-white bg-opacity-20 hover:bg-opacity-30 py-3 px-5 rounded-full text-black"
               >
                 <Filter size={18} />
                 <span>Filter</span>
@@ -169,7 +169,7 @@ function Recipes() {
                           setSelectedCategory(category);
                           setFilterOpen(false);
                         }}
-                        className={`block w-full text-left px-4 py-2 hover:bg-orange-50 ${
+                        className={`block w-full text-left text-black px-4 py-2 hover:bg-orange-50 ${
                           selectedCategory === category ? "bg-orange-100 text-orange-600 font-medium" : ""
                         }`}
                       >
